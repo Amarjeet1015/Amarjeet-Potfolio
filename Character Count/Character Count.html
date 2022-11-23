@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Character Count.css">
+    <title>Character Count</title>
+</head>
+
+
+<body>
+
+
+    <section class="stn-1">
+
+        <h1>Character or Words Counting</h1>
+        <textarea name="text-countAera" id="textArea" cols="30" rows="10" placeholder="Start Typing"></textarea>
+
+    </section>
+
+    <section class="stn-2">
+        <ul>
+            <li>
+                <div id="result-letters">0</div>
+                <p>letters</p>
+            </li>
+            <li>
+                <div id="result-words">0</div>
+                <p>Words</p>
+            </li>
+        </ul>
+
+        <button onclick="srtCount()">Start Countting</button>
+        <button onclick="clrBtn()">Reset</button>
+    </section>
+
+
+    <script>
+
+
+        function srtCount() {
+
+            // letter counting function 
+            let no_of_letters = document.getElementById('textArea').value.length;
+            document.getElementById('result-letters').innerHTML = no_of_letters;
+
+
+            // Words counting function 
+            let no_of_words = document.getElementById('textArea').value;
+            no_of_words = no_of_words.match(/\w+/g);
+            no_of_words = no_of_words.length;
+            document.getElementById('result-words').innerHTML = no_of_words;
+
+
+        }
+
+        //    Clear Content Button function 
+        function clrBtn() {
+            const textsArea = document.getElementById('textArea');
+            if (textsArea.value != " ") {
+                textsArea.value = " ";
+            }
+            document.getElementById('result-letters').innerHTML = " ";
+            document.getElementById('result-words').innerHTML = " ";
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

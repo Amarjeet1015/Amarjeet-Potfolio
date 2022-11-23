@@ -1,0 +1,1028 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@500;800&family=Poppins:wght@500;600;700;800&display=swap");
+/*---Variables---*/
+:root {
+  --font-family: "Inter", sans-serif;
+  --heading-color: #fe940d;
+  --title-color: #9ab5ce;
+  --para-color: #758a9e;
+  --gradient-color: linear-gradient(
+    90deg,
+    rgba(63, 251, 243, 1) 0%,
+    rgba(23, 255, 128, 1) 100%
+  );
+  --boxshadowColor: 0px 4px 5px rgba(0, 146, 44, 0.62);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #17202a;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+body h1 {
+  color: var(--heading-color);
+  font-size: 3.5rem;
+}
+body h2 {
+  color: var(--title-color);
+}
+body h3 {
+  color: var(--para-color);
+}
+body p {
+  font-size: 1.1rem;
+  color: var(--para-color);
+}
+body a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+section {
+  padding: 3.5rem 3rem;
+  margin: 1rem 3rem;
+}
+section .container {
+  display: flex;
+  justify-content: -jc;
+  align-items: -ai;
+  flex-direction: -fd;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background: #17202a;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: -fd;
+  z-index: 9999;
+}
+.header .ajb {
+  height: 4rem;
+}
+.header .navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: -fd;
+  gap: 2rem;
+}
+.header .navbar-list li {
+  list-style: none;
+}
+.header .navbar-list li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+.header .navbar-list li a:focus:after, .header .navbar-list li a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.header .navbar-list li a::after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 450ms;
+  transition-property: width, left;
+}
+.header .mobile-nav-btn {
+  background: transparent;
+  border: none;
+  display: none;
+}
+.header .mobile-nav-btn .mobile-nav-icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--heading-color);
+}
+.header .mobile-nav-btn .mobile-nav-icon[name=close] {
+  display: none;
+}
+
+.hero-section .container {
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  gap: 0;
+}
+.hero-section .container .hero-img img {
+  height: 20rem;
+}
+.hero-section .container .hero-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero-section .container .hero-profile .hero-content {
+  text-align: center;
+  gap: 0.5rem;
+}
+.hero-section .container .hero-profile .hero-content p {
+  max-width: 30rem;
+}
+.hero-section .container .hero-profile .social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: -fd;
+  margin-top: 2rem;
+  gap: 3rem;
+}
+.hero-section .container .hero-profile .social-container .social-links {
+  display: flex;
+  gap: 1.5rem;
+  text-align: center;
+}
+.hero-section .container .hero-profile .social-container .social-links ion-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.hero-section .container .hero-profile .social-container .social-links ion-icon:hover {
+  transform: translateY(-20%);
+}
+.hero-section .container .hero-profile .social-container .btn a {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--heading-color);
+  border-radius: 5rem;
+  color: var(--heading-color);
+  transition: all 0.3s ease-in-out;
+}
+.hero-section .container .hero-profile .social-container .btn a:hover {
+  background: var(--heading-color);
+  color: #171a1e;
+}
+
+.about-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  gap: 2rem;
+}
+.about-section .container h1::after {
+  content: " ";
+  position: absolute;
+  height: 3.5px;
+  width: 6rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+}
+.about-section .container h3 {
+  font-size: 1.4rem;
+  color: var(--title-color);
+  max-width: 55%;
+}
+.about-section .container p {
+  max-width: 50rem;
+}
+.about-section .container .btn {
+  margin-top: 3rem;
+}
+.about-section .container .btn a {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--heading-color);
+  border-radius: 5rem;
+  color: var(--heading-color);
+  transition: all 0.3s ease-in-out;
+}
+.about-section .container .btn a:hover {
+  background: var(--heading-color);
+  color: #171a1e;
+}
+
+.skill-section .container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.skill-section .container h1::after {
+  content: " ";
+  position: absolute;
+  height: 3.5px;
+  width: 6rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+}
+.skill-section .container .my-skills-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 5rem;
+  text-transform: capitalize;
+  color: var(--title-color);
+}
+.skill-section .container .my-skills-bar .skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.skill-section .container .my-skills-bar .skills-bars h3 span {
+  font-size: 1rem;
+}
+.skill-section .container .my-skills-bar .skills-bars .progress-bar {
+  width: 100%;
+  height: 1.5rem;
+  border: 2px solid var(--heading-color);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: -jc;
+  align-items: center;
+  flex-direction: -fd;
+  padding: 2px 4px;
+  position: relative;
+}
+.skill-section .container .my-skills-bar .skills-bars .progress-bar::before {
+  content: " ";
+  position: absolute;
+  height: 0.6rem;
+  background: var(--heading-color);
+  border-radius: 1rem 0 0 1rem;
+}
+.skill-section .container .my-skills-bar .skills-bars .progress-bar span {
+  position: absolute;
+  top: 1.5rem;
+  color: var(--heading-color);
+}
+.skill-section .container .my-skills-bar .skills-bars .html::before {
+  width: 60%;
+}
+.skill-section .container .my-skills-bar .skills-bars .html span {
+  left: 60%;
+}
+.skill-section .container .my-skills-bar .skills-bars .css::before {
+  width: 50%;
+}
+.skill-section .container .my-skills-bar .skills-bars .css span {
+  left: 50%;
+}
+.skill-section .container .my-skills-bar .skills-bars .scss::before {
+  width: 50%;
+}
+.skill-section .container .my-skills-bar .skills-bars .scss span {
+  left: 50%;
+}
+.skill-section .container .my-skills-bar .skills-bars .js::before {
+  width: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .js span {
+  left: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .node-js::before {
+  width: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .node-js span {
+  left: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .java::before {
+  width: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .java span {
+  left: 40%;
+}
+.skill-section .container .my-skills-bar .skills-bars .figma::before {
+  width: 55%;
+}
+.skill-section .container .my-skills-bar .skills-bars .figma span {
+  left: 55%;
+}
+
+.project-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.project-section .container h1::after {
+  content: " ";
+  position: absolute;
+  height: 3.5px;
+  width: 6rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+}
+.project-section .container .project-container {
+  display: flex;
+  gap: 3rem;
+}
+.project-section .container .project-container .project-link {
+  position: relative;
+  display: block;
+  height: 20rem;
+  width: 25rem;
+  overflow: hidden;
+}
+.project-section .container .project-container .project-link img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.project-section .container .project-container .project-link .common-project {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+.project-section .container .project-container .project-link .common-project span {
+  position: relative;
+  line-height: 3rem;
+}
+.project-section .container .project-container .project-link .common-project span::before, .project-section .container .project-container .project-link .common-project span::after {
+  content: " ";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background: #fff;
+  transition: width 0.4s ease-out;
+}
+.project-section .container .project-container .project-link .common-project span::before {
+  top: 0;
+  left: 0;
+}
+.project-section .container .project-container .project-link .common-project span::after {
+  right: 0;
+  bottom: 0;
+}
+.project-section .container .project-container .project-link .common-project:hover {
+  opacity: 1;
+  background: rgba(43, 43, 43, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.project-section .container .project-container .project-link:hover .common-project span::before, .project-section .container .project-container .project-link:hover .common-project span::after {
+  width: 100%;
+}
+
+.education-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: -ai;
+  flex-direction: column;
+  gap: 3rem;
+}
+.education-section .container h1::after {
+  content: " ";
+  position: absolute;
+  height: 3.5px;
+  width: 6rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+}
+.education-section .container .education-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 7rem;
+  position: relative;
+}
+.education-section .container .education-details .common-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.education-section .container .education-details .common-div h2 {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.education-section .container .education-details .common-div h2::before {
+  content: " ";
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 4px solid var(--title-color);
+  background: none;
+  border-radius: 1rem;
+  left: 4.3rem;
+}
+.education-section .container .education-details .common-div .acadimic-para::before {
+  content: " ";
+  position: absolute;
+  height: 2.5rem;
+  left: 5.1rem;
+  border-radius: 1rem;
+  background: var(--para-color);
+  border: 2px solid var(--para-color);
+}
+
+.contect-section .container {
+  display: flex;
+  justify-content: -jc;
+  align-items: -ai;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contect-section .container h1::after {
+  content: " ";
+  position: absolute;
+  height: 3.5px;
+  width: 6rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+}
+.contect-section .container .contect-section-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+.contect-section .container .contect-section-main form {
+  display: flex;
+  justify-content: center;
+  align-items: -ai;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contect-section .container .contect-section-main form .common-input {
+  height: 3rem;
+  border: 1.9px solid var(--heading-color);
+  border-radius: 3px;
+  background: transparent;
+  padding: 0 1rem;
+  outline: none;
+  color: var(--title-color);
+  max-width: 35rem;
+  letter-spacing: 0.4px;
+  font-size: 0.9em;
+}
+.contect-section .container .contect-section-main form .common-input::-moz-placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form .common-input:-ms-input-placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form .common-input::placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form textarea {
+  border: 1.9px solid var(--heading-color);
+  border-radius: 3px;
+  background: transparent;
+  outline: none;
+  padding: 1rem 1rem;
+  color: var(--title-color);
+  max-width: 35rem;
+  letter-spacing: 0.4px;
+  font-size: 1.2em;
+}
+.contect-section .container .contect-section-main form textarea::-moz-placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form textarea:-ms-input-placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form textarea::placeholder {
+  color: var(--para-color);
+}
+.contect-section .container .contect-section-main form .send-btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  border: 1.9px solid var(--heading-color);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--heading-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.contect-section .container .contect-section-main form .send-btn:hover {
+  background: var(--heading-color);
+  color: #171a1e;
+}
+.contect-section .container .contect-section-main .contect-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contect-section .container .contect-section-main .contect-details .details-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+  position: relative;
+}
+.contect-section .container .contect-section-main .contect-details .details-container h3 {
+  font-size: 1.5rem;
+}
+.contect-section .container .contect-section-main .contect-details .details-container p {
+  font-size: 1rem;
+  max-width: 40rem;
+}
+.contect-section .container .contect-section-main .contect-details .details-container .icon-container {
+  height: 4.5rem;
+  width: 4.5rem;
+  border: 1.5px solid var(--title-color);
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: -fd;
+}
+.contect-section .container .contect-section-main .contect-details .details-container ion-icon {
+  height: 1.9rem;
+  width: 1.9rem;
+  color: var(--title-color);
+}
+
+@media (max-width: 890px) {
+  .project-container {
+    flex-direction: column;
+  }
+  .container .contect-section-main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 720px) {
+  body {
+    scroll-behavior: smooth;
+  }
+  body h1 {
+    font-size: 2rem;
+  }
+  body h2 {
+    font-size: 1.2rem;
+  }
+  body h3 {
+    font-size: 1em;
+    color: var(--para-color);
+  }
+  body p {
+    font-size: 0.9rem;
+    color: var(--para-color);
+  }
+  section {
+    margin: 2rem 1rem;
+    padding: 4rem 1rem;
+  }
+  section .container {
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 1rem 0;
+  }
+  .header {
+    position: relative;
+    padding: 0 1.8rem;
+  }
+  .header img {
+    height: 2.5rem;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background: rgba(50, 57, 67, 0.3);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: -fd;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .header .navbar .navbar-list {
+    flex-direction: column;
+  }
+  .header .navbar .navbar-list a {
+    font-size: 1.1rem;
+  }
+  .header .mobile-nav-btn {
+    display: block;
+  }
+  .active .navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+  .active .mobile-nav-btn .mobile-nav-icon[name=menu] {
+    display: none;
+  }
+  .active .mobile-nav-btn .mobile-nav-icon[name=close] {
+    display: block;
+    color: white;
+  }
+  .hero-section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero-section .container .hero-img img {
+    height: 10rem;
+    width: 15rem;
+  }
+  .hero-section .container .hero-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-section .container .hero-profile .hero-content {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+  .hero-section .container .hero-profile .hero-content .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-section .container .hero-profile .btn a {
+    border: 2px solid var(--heading-color);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    color: var(--heading-color);
+    font-size: 0.8rem;
+  }
+  .about-section .container {
+    display: flex;
+    justify-content: -jc;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-section .container h1::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 0.2rem;
+    width: 3rem;
+    border-radius: 1rem;
+    background: white;
+  }
+  .about-section .container h3 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .about-section .container P {
+    text-align: center;
+  }
+  .about-section .container .btn a {
+    border: 2px solid var(--heading-color);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    color: var(--heading-color);
+    font-size: 0.8rem;
+  }
+  .skill-section .container {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 0;
+  }
+  .skill-section .container h1::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 2.5px;
+    width: 3rem;
+    border-radius: 1rem;
+    background: white;
+  }
+  .skill-section .container .my-skills-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .skill-section .container .my-skills-bar .skills-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .skill-section .container .my-skills-bar .skills-bars h3 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--title-color);
+  }
+  .skill-section .container .my-skills-bar .skills-bars h3 span {
+    font-size: 0.9em;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .progress-bar {
+    height: 0.3rem;
+    width: 100%;
+    border-radius: 2px;
+    border: 2px solid var(--heading-color);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.4rem;
+    position: relative;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .progress-bar::before {
+    content: " ";
+    position: absolute;
+    height: 0.3rem;
+    background: var(--heading-color);
+    border-radius: 1rem 0 0 1rem;
+    color: var(--heading-color);
+  }
+  .skill-section .container .my-skills-bar .skills-bars .progress-bar span {
+    position: absolute;
+    top: 1.2rem;
+    color: var(--heading-color);
+  }
+  .skill-section .container .my-skills-bar .skills-bars .html::before {
+    width: 60%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .html span {
+    left: 60%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .css::before {
+    width: 50%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .css span {
+    left: 50%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .scss::before {
+    width: 50%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .scss span {
+    left: 50%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .js::before {
+    width: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .js span {
+    left: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .node-js::before {
+    width: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .node-js span {
+    left: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .java::before {
+    width: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .java span {
+    left: 40%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .figma::before {
+    width: 55%;
+  }
+  .skill-section .container .my-skills-bar .skills-bars .figma span {
+    left: 55%;
+  }
+  .project-section .container {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+  .project-section .container h1::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 2.5px;
+    width: 3rem;
+    border-radius: 1rem;
+    background: white;
+  }
+  .project-section .container .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: -fd;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .project-section .container .project-container .project-link {
+    height: 18rem;
+    width: 20rem;
+  }
+  .project-section .container .project-container .project-link img {
+    width: 100%;
+    height: 100%;
+  }
+  .education-section .container {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .education-section .container h1::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 2.5px;
+    width: 3rem;
+    border-radius: 1rem;
+    background: white;
+  }
+  .education-section .container .education-details {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+  .education-section .container .education-details .common-div {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+  }
+  .education-section .container .education-details .common-div h2 {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: -jc;
+    align-items: center;
+    flex-direction: -fd;
+  }
+  .education-section .container .education-details .common-div h2::before {
+    content: " ";
+    position: absolute;
+    height: 0.8rem;
+    width: 0.8rem;
+    left: -1.7rem;
+    border: 3px solid var(--title-color);
+    border-radius: 1rem;
+  }
+  .education-section .container .education-details .common-div .acadimic-para::before {
+    content: " ";
+    position: absolute;
+    height: 2.5rem;
+    left: -1.2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--para-color);
+  }
+  .contect-section .container {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    position: relative;
+  }
+  .contect-section .container h1::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    height: 2.5px;
+    width: 3rem;
+    border-radius: 1rem;
+    background: white;
+  }
+  .contect-section .container .contect-section-main {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    padding: 0 2rem;
+    gap: 5rem;
+  }
+  .contect-section .container .contect-section-main form {
+    display: flex;
+    justify-content: -jc;
+    align-items: -ai;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contect-section .container .contect-section-main form input {
+    border: none;
+  }
+  .contect-section .container .contect-section-main form .common-input {
+    height: 3rem;
+    padding-left: 1rem;
+    background: transparent;
+    border: 1.5px solid var(--heading-color);
+    border-radius: 0.2rem;
+    color: var(--title-color);
+    font-size: 0.7rem;
+    outline: none;
+  }
+  .contect-section .container .contect-section-main form textarea {
+    padding: 1rem;
+    background: transparent;
+    border: 1.5px solid var(--heading-color);
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    color: var(--title-color);
+    outline: none;
+  }
+  .contect-section .container .contect-section-main form .send-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1.5px solid var(--heading-color);
+    border-radius: 0.2rem;
+    color: var(--heading-color);
+  }
+  .contect-section .container .contect-section-main .contect-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contect-section .container .contect-section-main .contect-details .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: -fd;
+    border: 1px solid gray;
+    border-radius: 0.2rem;
+  }
+  .contect-section .container .contect-section-main .contect-details .icon-container ion-icon {
+    font-size: 1.5rem;
+    color: var(--title-color);
+  }
+  .contect-section .container .contect-section-main .contect-details .details-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .contect-section .container .contect-section-main .contect-details .details-container p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 580px) {
+  section {
+    padding: 1rem 0 0 0;
+  }
+  section .container {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 470px) {
+  .hero-profile .social-container {
+    flex-direction: column;
+  }
+  .project-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contect-details h3 {
+    font-size: 1rem;
+  }
+  .contect-details p {
+    font-size: 0.5rem;
+    max-width: 5rem;
+  }
+}/*# sourceMappingURL=newCss.css.map */

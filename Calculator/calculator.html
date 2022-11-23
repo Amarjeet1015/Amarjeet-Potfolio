@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <h1>welcome to calculator</h1>
+
+    <div class="container">
+        <input type="text" name="output" id="inputText" placeholder="0">
+
+        <div class="num-op">
+            <div class="first-row">
+                <button onclick="allClr()" class="btn orange">Ac</button>
+                <button onclick="calculate('%')" class="btn orange">%</button>
+                <button onclick="calculate('/')" class="btn orange">/</button>
+                <button onclick="calculate('*')" class="btn orange">*</button>
+            </div>
+            <div class="second-row">
+                <button onclick="calculate('7')" class="btn" name="7">7</button>
+                <button onclick="calculate('8')" class="btn" name="8">8</button>
+                <button onclick="calculate('9')" class="btn" name="9">9</button>
+                <button onclick="calculate('-')" class="btn orange">-</button>
+            </div>
+            <div class="third-row">
+                <button onclick="calculate('4')" class="btn" name="4">4</button>
+                <button onclick="calculate('5')" class="btn" name="5">5</button>
+                <button onclick="calculate('6')" class="btn" name="6">6</button>
+                <button onclick="calculate('+')" class="btn orange" name="+">+</button>
+            </div>
+            <div class="fourth-row">
+                <button onclick="calculate('1')" class="btn" name="1">1</button>
+                <button onclick="calculate('2')" class="btn" name="2">2</button>
+                <button onclick="calculate('3')" class="btn" name="3">3</button>
+                <button onclick="Result()" class="btn equal orange" name="=">=</button>
+            </div>
+            <div class="fifth-row">
+                <button onclick="calculate('0')" class="btn" name="0">0</button>
+                <button onclick="calculate('.')" class="btn orange" name=".">.</button>
+                <button onclick="del()" class="btn orange" name="c">DEL</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let result = document.getElementById('inputText');
+
+        let calculate = (num) => {
+            result.value = result.value + num;
+
+        }
+
+        let Result = () => {
+
+            try {
+                result.value = eval(result.value);
+            }
+            catch (err) {
+                alert("Enter the valid input");
+            }
+        }
+
+
+
+        function allClr() {
+            result.value = " ";
+        }
+
+
+        function del() {
+            result.value = result.value.slice(0, -1);
+            //  (0, -1) 0 means remove from starting point and
+            //          -1 means remove from endding point
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@500;800&family=Roboto:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  font-family: "Inter", sans-serif;
+  background: #050d19;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  background-color: transparent;
+  color: rgb(219, 219, 219);
+  outline: auto;
+  padding: 0 1rem;
+}
+
+.container {
+  height: 28rem;
+  width: 20rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 5px;
+  background: #263c5a;
+}
+.container input {
+  height: 5rem;
+  width: 100%;
+  padding-right: 0.3rem;
+  text-align: right;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.container .num-op {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container .num-op .btn {
+  height: 4rem;
+  width: 4.4rem;
+  font-size: 1.2rem;
+  border: 2px solid #1f3654;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgb(20, 40, 65);
+  border: none;
+}
+.container .num-op .btn:hover {
+  background: #40669b;
+}
+.container .num-op .btn:active {
+  background: #304d75;
+}
+.container .num-op .equal {
+  position: absolute;
+  height: 8.5rem;
+  margin-left: 0.3rem;
+}
+.container .num-op .orange {
+  color: rgb(250, 178, 44);
+  font-weight: 600;
+}
+.container .num-op .fourth-row[name="="] {
+  height: 9rem;
+}/*# sourceMappingURL=calculator.css.map */
